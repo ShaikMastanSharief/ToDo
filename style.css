@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: repeating-linear-gradient(to bottom,
+            #f5f0e6,
+            #f5f0e6 39px,
+            #faf9f5 40px);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    background-image: none;
+}
+
+.notebook {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
+
+body.dark-mode .notebook {
+    background: #2e2e2e;
+    border-color: #555;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+body.dark-mode h1 {
+    color: #f1f1f1;
+}
+
+#darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.input-group,
+.search-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #333;
+    color: white;
+    border-color: #666;
+}
+
+#addButton {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4b79a1;
+    color: white;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #375a7f;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.line-number {
+    width: 30px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #999;
+}
+
+.task-text {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn.edit {
+    color: #007bff;
+}
+
+.btn.delete {
+    color: #e74c3c;
+}
+
+.priority,
+.due {
+    font-size: 12px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.task-stats {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+body.dark-mode .task-stats {
+    color: #ccc;
+}

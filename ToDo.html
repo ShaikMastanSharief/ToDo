@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notebook To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="notebook">
+    <h1>📘 My To-Do Notebook</h1>
+    <button id="darkModeToggle">🌙</button>
+    <div class="task-stats" id="taskStats"></div>
+    <div class="search-group">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+      <select id="priorityFilter">
+        <option value="All">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <select id="sortBy">
+        <option value="default">Sort By</option>
+        <option value="dueDate">Due Date</option>
+        <option value="priority">Priority</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Write a task..." />
+      <input type="date" id="dueDate" />
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="addButton">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+</body>
+</html>
